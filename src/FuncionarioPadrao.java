@@ -1,7 +1,7 @@
-public class FuncionarioPadrao {
+public class FuncionarioPadrao extends Funcionario {
 
-    // construtor
     public FuncionarioPadrao(String nome, int matricula) {
         super(nome, matricula);
     }
 }
+
