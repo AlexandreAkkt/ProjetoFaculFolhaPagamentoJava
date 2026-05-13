@@ -1,3 +1,9 @@
+package controller;
+import model.Funcionario;
+import model.FuncionarioComissionado;
+import model.FuncionarioPadrao;
+import model.FuncionarioProducao;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -56,7 +62,7 @@ public class Main {
         }
 
         // mostrar folha
-        System.out.println("\n=== FOLHA DE PAGAMENTO ===");
+        System.out.println("\n Folha de Pagamento");
 
         for (Funcionario f : lista) {
             f.exibirDados();

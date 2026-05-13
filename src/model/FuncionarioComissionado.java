@@ -1,18 +1,19 @@
-public class FuncionarioProducao extends Funcionario {
+package model;
 
-    private int quantidade;
-    private double valorPeca;
+public class FuncionarioComissionado extends Funcionario {
 
-    // construtor
-    public FuncionarioProducao(String nome, int matricula, int quantidade, double valorPeca) {
+    private double vendas;
+    private double percentual;
+
+    public FuncionarioComissionado(String nome, int matricula, double vendas, double percentual) {
         super(nome, matricula);
-        this.quantidade = quantidade;
-        this.valorPeca = valorPeca;
+        this.vendas = vendas;
+        this.percentual = percentual;
     }
 
     @Override
     public double calcularSalario() {
-        return SALARIO_BASE + (quantidade * valorPeca);
+        return SALARIO_BASE + (vendas * percentual / 100);
     }
 
     @Override
